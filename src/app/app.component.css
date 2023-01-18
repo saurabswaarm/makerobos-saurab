@@ -13,6 +13,7 @@ table {
 
   td, th{
     border: 1px solid #dddddd;
+    border-radius: 3px;
     text-align: left;
     padding: 8px;
   }
@@ -20,3 +21,12 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  button {
+    background-color: rgb(62, 62, 225);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: medium;
+    box-shadow: none;
+    border:0;
+}
