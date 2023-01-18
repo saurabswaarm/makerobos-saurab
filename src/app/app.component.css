@@ -8,6 +8,7 @@ table {
     position: sticky;
     top:0;
     background-color: red;
+    z-index: 9999
   }
 
   td, th{

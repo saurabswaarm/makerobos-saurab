@@ -1,33 +1,11 @@
-<style>
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .tableheader {
-    position: sticky;
-    top:0;
-    background-color: red;
-  }
 
-  td{
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  </style>
-  <body>
-  
+ 
+ <button (click)="makePostRequest()">Make Post Request</button> 
   <table>
     <tr class="tableheader">
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Body</th>
     </tr>
     <tr *ngFor="let item of data">
       <td>{{ item.id }}</td>
