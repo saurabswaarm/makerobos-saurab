@@ -8,6 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppComponent {
   data: any;
+  date: Date = new Date()
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +20,7 @@ export class AppComponent {
 
   makePostRequest() {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const body = { title: 'Time', body: '3-1-2020' };
+    const body = { title: this.date.toLocaleTimeString(), body: this.date.toLocaleDateString() };
     this.http.post('https://jsonplaceholder.typicode.com/posts', body, { headers }).subscribe(response => {
       console.log(response);
       this.data.push(response);
